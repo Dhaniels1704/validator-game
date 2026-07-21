@@ -245,48 +245,74 @@ export const DOCS_HTML = `<!DOCTYPE html>
   }
   .nav-links a:hover{color:var(--white);}
 
-  main{max-width:960px;margin:0 auto;padding:56px 24px 100px;}
+  main{max-width:820px;margin:0 auto;padding:48px 20px 100px;}
 
-  h1{font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:-0.02em;}
-  .lede{color:var(--gray);margin-top:14px;font-size:15.5px;max-width:620px;line-height:1.6;}
+  h1{font-size:clamp(26px,5vw,38px);font-weight:700;letter-spacing:-0.02em;}
+  .lede{color:var(--gray);margin-top:14px;font-size:15px;line-height:1.6;}
 
   .base-url{
-    margin-top:26px;
-    display:inline-flex;align-items:center;gap:10px;
+    margin-top:24px;
+    display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
     border:1px solid var(--line);border-radius:8px;
-    padding:12px 16px;font-family:'JetBrains Mono',monospace;font-size:14px;
+    padding:12px 16px;font-family:'JetBrains Mono',monospace;font-size:13px;
     background:var(--panel);color:var(--gray);
   }
   .base-url b{color:var(--white);font-weight:500;}
 
-  section{margin-top:52px;}
   .section-title{
     display:flex;align-items:center;gap:10px;
-    font-family:'JetBrains Mono',monospace;font-size:13px;
+    font-family:'JetBrains Mono',monospace;font-size:12.5px;
     text-transform:uppercase;letter-spacing:.08em;color:var(--gray-dim);
-    margin-bottom:16px;
+    margin:44px 0 16px;
   }
   .section-title::after{content:'';flex:1;height:1px;background:var(--line);}
 
-  table{width:100%;border-collapse:collapse;font-size:13.5px;}
-  th{
-    text-align:left;font-family:'JetBrains Mono',monospace;
-    font-size:11px;text-transform:uppercase;letter-spacing:.06em;
-    color:var(--gray-dim);padding:0 12px 12px;border-bottom:1px solid var(--line);
-    font-weight:500;
+  .ep-card{
+    border:1px solid var(--line);border-radius:12px;
+    background:var(--panel);
+    margin-bottom:14px;
+    overflow:hidden;
   }
-  td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:middle;}
-  tr:last-child td{border-bottom:none;}
-  .ep-name{font-weight:700;}
-  .ep-path{color:var(--gray);font-family:'JetBrains Mono',monospace;font-size:12px;display:block;margin-top:3px;}
-  .param{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gray);}
+  .ep-head{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:10px;padding:16px 18px;flex-wrap:wrap;
+  }
+  .ep-title{display:flex;flex-direction:column;gap:4px;}
+  .ep-title b{font-size:15.5px;font-weight:700;}
+  .ep-title span{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gray);}
+  .ep-badges{display:flex;gap:8px;flex-shrink:0;}
   .badge{
     font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
     padding:4px 9px;border-radius:5px;border:1px solid var(--line);
-    display:inline-block;white-space:nowrap;
+    display:inline-flex;align-items:center;white-space:nowrap;
   }
   .badge-get{color:var(--white);}
   .badge-online{color:var(--green);border-color:rgba(127,209,140,.3);}
+
+  .ep-try{
+    border-top:1px solid var(--line);
+    padding:14px 18px 18px;
+    display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;
+  }
+  .field{display:flex;flex-direction:column;gap:5px;flex:1;min-width:110px;}
+  .field label{
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--gray-dim);
+    text-transform:uppercase;letter-spacing:.05em;
+  }
+  .field input{
+    background:var(--bg);border:1px solid var(--line);color:var(--white);
+    border-radius:6px;padding:9px 10px;font-family:'JetBrains Mono',monospace;
+    font-size:13px;width:100%;
+  }
+  .field input:focus{outline:none;border-color:var(--gray);}
+  .field input::placeholder{color:var(--gray-dim);}
+
+  .try-btn{
+    background:var(--white);color:var(--bg);border:none;
+    font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;
+    padding:10px 16px;border-radius:6px;cursor:pointer;flex-shrink:0;
+  }
+  .try-btn:active{transform:scale(.98);}
 
   .panel{
     background:var(--panel);border:1px solid var(--line);border-radius:10px;
@@ -297,22 +323,8 @@ export const DOCS_HTML = `<!DOCTYPE html>
   .panel .c-val{color:var(--white);}
   .panel .c-str{color:var(--green);}
 
-  .params-list{list-style:none;margin-top:4px;}
-  .params-list li{
-    display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);
-    font-size:14px;
-  }
-  .params-list li:last-child{border-bottom:none;}
-  .params-list b{font-family:'JetBrains Mono',monospace;color:var(--white);min-width:70px;}
-  .params-list span{color:var(--gray);}
-  .req{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray-dim);border:1px solid var(--line);padding:2px 7px;border-radius:4px;margin-left:8px;}
-
   footer{border-top:1px solid var(--line);padding:24px;text-align:center;
     font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--gray-dim);}
-
-  @media (max-width:640px){
-    th:nth-child(3), td:nth-child(3){display:none;}
-  }
 </style>
 </head>
 <body>
@@ -326,58 +338,194 @@ export const DOCS_HTML = `<!DOCTYPE html>
 
 <main>
   <h1>Dokumentasi API</h1>
-  <p class="lede">Satu API buat lookup nickname akun berdasarkan ID, dari banyak game. Semua endpoint dipanggil dengan GET dan hasilnya JSON.</p>
+  <p class="lede">Lookup nickname akun berdasarkan ID, dari banyak game. Semua endpoint GET, hasilnya JSON. Isi ID di kolom bawah tiap endpoint terus pencet Try buat langsung nyoba.</p>
 
   <div class="base-url">Base URL &nbsp;<b>https://api.dhanielsstore.com</b></div>
 
-  <section>
-    <div class="section-title">Daftar Endpoint</div>
-    <table>
-      <thead>
-        <tr>
-          <th>Game</th>
-          <th>Parameter</th>
-          <th>Method</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><span class="ep-name">Arena Of Valor</span><span class="ep-path">/nickname/aov</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Call Of Duty Mobile</span><span class="ep-path">/nickname/codm</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Garena Free Fire</span><span class="ep-path">/nickname/ff</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Genshin Impact</span><span class="ep-path">/nickname/gi</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Honkai Impact 3rd</span><span class="ep-path">/nickname/hi</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Honkai Star Rail</span><span class="ep-path">/nickname/hsr</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">LifeAfter</span><span class="ep-path">/nickname/la</span></td><td class="param">id, zone</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Love and Deepspace</span><span class="ep-path">/nickname/ld</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Magic Chess: Go Go</span><span class="ep-path">/nickname/mcgg</span></td><td class="param">id, server</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Mobile Legends: Bang Bang</span><span class="ep-path">/nickname/ml</span></td><td class="param">id, server</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Point Blank</span><span class="ep-path">/nickname/pb</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Punishing: Gray Raven</span><span class="ep-path">/nickname/pgr</span></td><td class="param">id, zone</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Sausage Man</span><span class="ep-path">/nickname/sm</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Super Sus</span><span class="ep-path">/nickname/sus</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">VALORANT</span><span class="ep-path">/nickname/valo</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-        <tr><td><span class="ep-name">Zenless Zone Zero</span><span class="ep-path">/nickname/zzz</span></td><td class="param">id</td><td><span class="badge badge-get">GET</span></td><td><span class="badge badge-online">ONLINE</span></td></tr>
-      </tbody>
-    </table>
-  </section>
+  <div class="section-title">Endpoints</div>
 
-  <section>
-    <div class="section-title">Catatan Parameter</div>
-    <ul class="params-list">
-      <li><b>id</b><span>User ID akun game tujuan. <span class="req">wajib, semua endpoint</span></span></li>
-      <li><b>server / zone</b><span>Diperlukan cuma di beberapa game: ML &amp; MCGG pakai zone ID angka, PGR pakai kode <code>ap</code>/<code>eu</code>/<code>na</code>, LifeAfter pakai nama server (contoh: <code>miskatown</code>).</span></li>
-    </ul>
-  </section>
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Arena Of Valor</b><span>/nickname/aov</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/aov" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
 
-  <section>
-    <div class="section-title">Contoh Request — Mobile Legends</div>
-    <div class="panel">GET https://api.dhanielsstore.com/nickname/ml?id=1114917746&server=13486</div>
-  </section>
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Call Of Duty Mobile</b><span>/nickname/codm</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/codm" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
 
-  <section>
-    <div class="section-title">Contoh Response — Sukses</div>
-    <div class="panel">{
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Garena Free Fire</b><span>/nickname/ff</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/ff" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Genshin Impact</b><span>/nickname/gi</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/gi" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="UID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Honkai Impact 3rd</b><span>/nickname/hi</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/hi" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Honkai Star Rail</b><span>/nickname/hsr</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/hsr" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="UID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>LifeAfter</b><span>/nickname/la</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/la" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <div class="field"><label>zone</label><input type="text" name="zone" placeholder="cth: miskatown" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Love and Deepspace</b><span>/nickname/ld</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/ld" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Magic Chess: Go Go</b><span>/nickname/mcgg</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/mcgg" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <div class="field"><label>server</label><input type="text" name="server" placeholder="Zone ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Mobile Legends: Bang Bang</b><span>/nickname/ml</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/ml" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="1114917746" value="1114917746"></div>
+      <div class="field"><label>server</label><input type="text" name="server" placeholder="13486" value="13486"></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Point Blank</b><span>/nickname/pb</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/pb" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Punishing: Gray Raven</b><span>/nickname/pgr</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/pgr" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <div class="field"><label>zone</label><input type="text" name="zone" placeholder="ap / eu / na" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Sausage Man</b><span>/nickname/sm</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/sm" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Super Sus</b><span>/nickname/sus</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/sus" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>VALORANT</b><span>/nickname/valo</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/valo" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="Riot ID#Tag" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Zenless Zone Zero</b><span>/nickname/zzz</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/zzz" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="UID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
+
+  <div class="section-title">Contoh Response — Sukses</div>
+  <div class="panel">{
   <span class="c-key">"success"</span>: <span class="c-val">true</span>,
   <span class="c-key">"game"</span>: <span class="c-str">"Mobile Legends: Bang Bang"</span>,
   <span class="c-key">"id"</span>: <span class="c-val">1114917746</span>,
@@ -385,15 +533,12 @@ export const DOCS_HTML = `<!DOCTYPE html>
   <span class="c-key">"name"</span>: <span class="c-str">"Outrageous Dominance"</span>,
   <span class="c-key">"country"</span>: <span class="c-str">"Indonesia"</span>
 }</div>
-  </section>
 
-  <section>
-    <div class="section-title">Contoh Response — Gagal</div>
-    <div class="panel">{
+  <div class="section-title">Contoh Response — Gagal</div>
+  <div class="panel">{
   <span class="c-key">"success"</span>: <span class="c-val">false</span>,
   <span class="c-key">"message"</span>: <span class="c-str">"Bad request"</span>
 }</div>
-  </section>
 </main>
 
 <footer>© 2026 Dhaniels Store — api.dhanielsstore.com</footer>
