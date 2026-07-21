@@ -1,6 +1,6 @@
 import { Result } from '../utils'
 
-export default async function codm(id: number): Promise<Result> {
+export default async function codm(id: string): Promise<Result> {
   const response = await fetch(
     `https://api-cek-id-game-ten.vercel.app/api/check-id-game?type_name=call_of_duty&userId=${id}`
   )
