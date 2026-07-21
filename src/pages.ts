@@ -152,8 +152,8 @@ export const LANDING_HTML = `<!DOCTYPE html>
 <main>
   <div class="hero">
     <div class="eyebrow"><span class="ping"></span> Validator Nickname Game</div>
-    <h1>Tinggal Masukin ID Tujuan, dan <span class="accent">BOOM</span> Ketemu nicknamenya.</h1>
-    <p class="sub">Api buat validasi ID game — dipakai oleh seluruh sistem Dhaniels Store, sekarang bisa lo pake juga.</p>
+    <h1>Koleksi endpoint siap pakai untuk <span class="accent">Project</span> bot, aplikasi, dan eksperimenmu. Stabil dan gampang diintegrasikan.</h1>
+    <p class="sub">Api yang dipakai oleh seluruh sistem Dhaniels Store, sekarang bisa lo pake juga.</p>
 
     <div class="actions">
       <a class="btn btn-primary" href="/docs">Lihat Dokumentasi →</a>
