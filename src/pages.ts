@@ -4,6 +4,7 @@ export const LANDING_HTML = `<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dhaniels Store API — Nickname Validator</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwYTBhMGEiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDIiIGZvbnQtZmFtaWx5PSJKZXRCcmFpbnMgTW9ubywgbW9ub3NwYWNlIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZjVmNWY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4mZ3Q7XzwvdGV4dD4KPC9zdmc+Cg==">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
@@ -215,6 +216,7 @@ export const DOCS_HTML = `<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Docs — Dhaniels Store API</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwYTBhMGEiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDIiIGZvbnQtZmFtaWx5PSJKZXRCcmFpbnMgTW9ubywgbW9ub3NwYWNlIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZjVmNWY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4mZ3Q7XzwvdGV4dD4KPC9zdmc+Cg==">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
@@ -451,7 +453,7 @@ export const DOCS_HTML = `<!DOCTYPE html>
       <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
     </div>
     <form class="ep-try" action="/nickname/ml" method="get">
-      <div class="field"><label>id</label><input type="text" name="id" placeholder="1114917746" value="1114917746"></div>
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" value="Server"></div>
       <div class="field"><label>server</label><input type="text" name="server" placeholder="13486" value="13486"></div>
       <button class="try-btn" type="submit">Try →</button>
     </form>
@@ -528,9 +530,9 @@ export const DOCS_HTML = `<!DOCTYPE html>
   <div class="panel">{
   <span class="c-key">"success"</span>: <span class="c-val">true</span>,
   <span class="c-key">"game"</span>: <span class="c-str">"Mobile Legends: Bang Bang"</span>,
-  <span class="c-key">"id"</span>: <span class="c-val">1114917746</span>,
-  <span class="c-key">"server"</span>: <span class="c-val">13486</span>,
-  <span class="c-key">"name"</span>: <span class="c-str">"Outrageous Dominance"</span>,
+  <span class="c-key">"id"</span>: <span class="c-val">1234567</span>,
+  <span class="c-key">"server"</span>: <span class="c-val">12345</span>,
+  <span class="c-key">"name"</span>: <span class="c-str">"Vipers Projects"</span>,
   <span class="c-key">"country"</span>: <span class="c-str">"Indonesia"</span>
 }</div>
 
