@@ -1,7 +1,7 @@
 import { hitCoda, Result } from '../utils'
 
 export default async function codm(id: number): Promise<Result> {
-  const body = `user.userId=${id}&voucherPricePoint.id=46129&voucherPricePoint.price=10000&shopLang=id_ID&voucherTypeName=CALL_OF_DUTY`
+  const body = `user.userId=${id}&voucherPricePoint.id=270251&voucherPricePoint.price=20000.0000&shopLang=id_ID&voucherTypeName=CALL_OF_DUTY`
   const data = await hitCoda(body)
   return {
     success: true,
