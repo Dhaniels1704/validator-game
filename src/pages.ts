@@ -447,14 +447,14 @@ export const DOCS_HTML = `<!DOCTYPE html>
     </form>
   </div>
 
-  <div class="ep-card">
+<div class="ep-card">
     <div class="ep-head">
       <div class="ep-title"><b>Mobile Legends: Bang Bang</b><span>/nickname/ml</span></div>
       <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
     </div>
     <form class="ep-try" action="/nickname/ml" method="get">
-      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" value="Server"></div>
-      <div class="field"><label>server</label><input type="text" name="server" placeholder="13486" value="13486"></div>
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <div class="field"><label>server</label><input type="text" name="server" placeholder="Server" required></div>
       <button class="try-btn" type="submit">Try →</button>
     </form>
   </div>
