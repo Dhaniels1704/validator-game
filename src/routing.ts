@@ -15,7 +15,7 @@ export default async function callAPI(url: string): Promise<Result> {
       case path.includes('/aov'):
         return await router.aov(Number(id))
       case path.includes('/codm'):
-        return await router.codm(Number(id))
+        return await router.codm(id)
       case path.includes('/ff'):
         return await router.ff(Number(id))
       case path.includes('/gi'):
