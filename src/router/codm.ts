@@ -1,13 +1,26 @@
-import { hitCoda, Result } from '../utils'
+import { Result } from '../utils'
 
 export default async function codm(id: number): Promise<Result> {
-  const body = `user.userId=${id}&voucherPricePoint.id=270251&voucherPricePoint.price=20000.0000&shopLang=id_ID&voucherTypeName=CALL_OF_DUTY`
-  const data = await hitCoda(body)
+  const response = await fetch(
+    `https://api-cek-id-game-ten.vercel.app/api/check-id-game?type_name=call_of_duty&userId=${id}`
+  )
+  const data = await response.json() as {
+    status: boolean
+    nickname?: string
+    message: string
+  }
+
+  if (!data.status) {
+    return {
+      success: false,
+      message: data.message
+    }
+  }
+
   return {
     success: true,
     game: 'Call Of Duty Mobile',
     id,
-    name: data.confirmationFields.roles[0].role,
-    server: data.confirmationFields.roles[0].server
+    name: data.nickname
   }
 }
