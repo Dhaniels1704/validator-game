@@ -356,6 +356,17 @@ export const DOCS_HTML = `<!DOCTYPE html>
       <button class="try-btn" type="submit">Try →</button>
     </form>
   </div>
+  
+  <div class="ep-card">
+    <div class="ep-head">
+      <div class="ep-title"><b>Aether Gazer</b><span>/nickname/ag</span></div>
+      <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
+    </div>
+    <form class="ep-try" action="/nickname/ag" method="get">
+      <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
+      <button class="try-btn" type="submit">Try →</button>
+    </form>
+  </div>
 
   <div class="ep-card">
     <div class="ep-head">
@@ -373,7 +384,7 @@ export const DOCS_HTML = `<!DOCTYPE html>
       <div class="ep-title"><b>Call Of Duty Mobile V2</b><span>/nickname/codmv2</span></div>
       <div class="ep-badges"><span class="badge badge-get">GET</span><span class="badge badge-online">ONLINE</span></div>
     </div>
-    <form class="ep-try" action="/nickname/codm" method="get">
+    <form class="ep-try" action="/nickname/codmv2" method="get">
       <div class="field"><label>id</label><input type="text" name="id" placeholder="User ID" required></div>
       <button class="try-btn" type="submit">Try →</button>
     </form>
