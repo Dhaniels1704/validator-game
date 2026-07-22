@@ -1,0 +1,14 @@
+import { hitCoda, Result } from '../utils'
+
+export default async function ag(id: number): Promise<Result> {
+  const dynamicSkuToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkeW5hbWljU2t1SW5mbyI6IntcInNrdUlkXCI6XCJjb20ueW9zdGFyLmFldGhlcmdhemVyLnNoaWZ0aW5nZmxvd2VyMVwiLFwiZXZlbnRQYWNrYWdlXCI6XCIwXCIsXCJkZW5vbUltYWdlVXJsXCI6XCJodHRwczovL2NkbjEuY29kYXNob3AuY29tL2ltYWdlcy81NDdfM2QyMTBiNzUtNTJkYi00YjUxLTgzMGYtZDYxMTFiNjFkNDQ5X0FFVEhFUiBHQVpFUl9pbWFnZS9Db2RhX0FHX1NLVWltYWdlcy82MC5wbmdcIixcImRlbm9tTmFtZVwiOlwiNjAgU2hpZnRpbmcgRmxvd2Vyc1wiLFwiZGVub21DYXRlZ29yeU5hbWVcIjpcIlNoaWZ0aW5nIEZsb3dlcnNcIixcInRhZ3NcIjpbXSxcImNvdW50cnkyTmFtZVwiOlwiSURcIixcImx2dElkXCI6MTE4NDAsXCJhZGRpdGlvbmFsSW5mb1wiOntcIkR5bmFtaWNTa3VQcm9tb0RldGFpbFwiOlwibnVsbFwifX0ifQ.eKiPyHwGZJUuUGGzwWiPiDuF6xC5G7_PWLn6TXVAKVs'
+  const pricePointDynamicSkuToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkeW5hbWljU2t1SW5mbyI6IntcInBjSWRcIjo5MDYsXCJwcmljZVwiOjE2NjUwLjAsXCJjdXJyZW5jeVwiOlwiSURSXCIsXCJhcGlQcmljZVwiOjE2NjUwLjAsXCJhcGlQcmljZUN1cnJlbmN5XCI6XCJJRFJcIixcImRpc2NvdW50UHJpY2VcIjoxNjY1MC4wLFwicHJpY2VCZWZvcmVUYXhcIjoxNTAwMC4wLFwidGF4QW1vdW50XCI6MTY1MC4wLFwic2t1SWRcIjpcImNvbS55b3N0YXIuYWV0aGVyZ2F6ZXIuc2hpZnRpbmdmbG93ZXIxXCIsXCJsdnRJZFwiOjExODQwfSJ9.y89THkVNztOzAXS64nr9Rtamn3wbWLIYXeRWrZ9yMBc'
+  const body = `user.userId=${id}&voucherPricePoint.id=2&voucherPricePoint.price=16650&voucherPricePoint.variablePrice=0&voucherTypeName=547-AETHER_GAZER&voucherTypeId=524&gvtId=691&lvtId=11840&pcId=906&shopLang=id_ID&dynamicSkuToken=${dynamicSkuToken}&pricePointDynamicSkuToken=${pricePointDynamicSkuToken}`
+  const data = await hitCoda(body)
+  return {
+    success: true,
+    game: 'Aether Gazer',
+    id,
+    name: data.confirmationFields.username
+  }
+}
